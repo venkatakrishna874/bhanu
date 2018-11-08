@@ -47,7 +47,7 @@
             </div>
         </main>
         <footer class="footer">
-            <span class="footer-logo"><img src='../src/assets/ey-logo.svg' alt="EY"></span>
+            <span class="footer-logo"><img src='./assets/ey-logo.svg' alt="EY"></span>
             <div class="footer-text"><p>&#169;{{ new Date().getFullYear() }} Ernst & Young LLP | All Rights Reserved. | content within this application is confidential and meant for EY<br> staff and EY clients only. Please review the <a class="privacy-link" href="">Privacy statement</a> and<a href="" class="privacy-link"> Master Agreement</a> for Additional refernces</p></div>
         </footer>
     </div>

@@ -109,13 +109,13 @@ export default {
       return this.dropDownTemplate;
     },
     getTaxWorkPaperTemplate() {
-      return "<img class='excel-image' onclick=\"window.open('ms-excel:ofe|u|http://localhost/urlFiles/B01 - 2017_4Q_11W42 LP_Tax_Template_Workpaper_Domestic_EY RIA STEPUP 2.2....xlsm', '_blank')\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IgogICAgIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIKICAgICB2aWV3Qm94PSIwIDAgNDggNDgiCiAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDsiPjxnIGlkPSJzdXJmYWNlMSI+PHBhdGggc3R5bGU9IiBmaWxsOiM0Q0FGNTA7IiBkPSJNIDQxIDEwIEwgMjUgMTAgTCAyNSAzOCBMIDQxIDM4IEMgNDEuNTU0Njg4IDM4IDQyIDM3LjU1NDY4OCA0MiAzNyBMIDQyIDExIEMgNDIgMTAuNDQ1MzEzIDQxLjU1NDY4OCAxMCA0MSAxMCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAzMiAxNSBMIDM5IDE1IEwgMzkgMTggTCAzMiAxOCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAzMiAyNSBMIDM5IDI1IEwgMzkgMjggTCAzMiAyOCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAzMiAzMCBMIDM5IDMwIEwgMzkgMzMgTCAzMiAzMyBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAzMiAyMCBMIDM5IDIwIEwgMzkgMjMgTCAzMiAyMyBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAyNSAxNSBMIDMwIDE1IEwgMzAgMTggTCAyNSAxOCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAyNSAyNSBMIDMwIDI1IEwgMzAgMjggTCAyNSAyOCBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAyNSAzMCBMIDMwIDMwIEwgMzAgMzMgTCAyNSAzMyBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAyNSAyMCBMIDMwIDIwIEwgMzAgMjMgTCAyNSAyMyBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojMkU3RDMyOyIgZD0iTSAyNyA0MiBMIDYgMzggTCA2IDEwIEwgMjcgNiBaICI+PC9wYXRoPjxwYXRoIHN0eWxlPSIgZmlsbDojRkZGRkZGOyIgZD0iTSAxOS4xMjg5MDYgMzEgTCAxNi43MTg3NSAyNi40Mzc1IEMgMTYuNjI1IDI2LjI2OTUzMSAxNi41MzEyNSAyNS45NTcwMzEgMTYuNDMzNTk0IDI1LjUgTCAxNi4zOTg0MzggMjUuNSBDIDE2LjM1MTU2MyAyNS43MTQ4NDQgMTYuMjQyMTg4IDI2LjA0Mjk2OSAxNi4wNzQyMTkgMjYuNDgwNDY5IEwgMTMuNjUyMzQ0IDMxIEwgOS44OTQ1MzEgMzEgTCAxNC4zNTU0NjkgMjQgTCAxMC4yNzM0MzggMTcgTCAxNC4xMDkzNzUgMTcgTCAxNi4xMTMyODEgMjEuMTk1MzEzIEMgMTYuMjY5NTMxIDIxLjUyNzM0NCAxNi40MDYyNSAyMS45MjE4NzUgMTYuNTMxMjUgMjIuMzc1IEwgMTYuNTcwMzEzIDIyLjM3NSBDIDE2LjY0ODQzOCAyMi4xMDU0NjkgMTYuNzk2ODc1IDIxLjY5NTMxMyAxNy4wMTE3MTkgMjEuMTU2MjUgTCAxOS4yMzgyODEgMTcgTCAyMi43NTM5MDYgMTcgTCAxOC41NTQ2ODggMjMuOTM3NSBMIDIyLjg2NzE4OCAzMC45OTYwOTQgTCAxOS4xMjg5MDYgMzAuOTk2MDk0IFogIj48L3BhdGg+PC9nPjwvc3ZnPg==\"/>";
+      return `<img class='excel-image' onclick="window.open('ms-excel:ofe|u|http://localhost/urlFiles/B01 - 2017_4Q_11W42 LP_Tax_Template_Workpaper_Domestic_EY RIA STEPUP 2.2....xlsm', '_blank')" src='../../assets/excel.png'/>`;
     },
     getCheckCircleTemplate() {
       return "<div class='checkmark_circle'></div>";
     },
     getTaxableIncomeSummaryTemplate() {
-      return '<img src="@/assets/L_EBA9tmp.png">';
+      return '<img src="../../assets/L_EBA9tmp.png">';
     },
     getLastAllocationTemplate() {
       return "#= kendo.toString(kendo.parseDate(lastAllocationDate, 'yyyy-MM-dd'), 'MM/dd/yyyy hh:mm') #";
