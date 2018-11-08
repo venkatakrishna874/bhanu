@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .shorttextbox {
   background-color: #f0f0f0 !important;
   width: 180px !important;

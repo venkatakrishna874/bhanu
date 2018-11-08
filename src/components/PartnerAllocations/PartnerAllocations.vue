@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 .Partner-app {
   margin-left: 40px;
   margin-right: 40px;

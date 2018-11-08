@@ -191,7 +191,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 .vue-app_new {
   margin-left: 40px;
   margin-right: 40px;
@@ -239,7 +239,7 @@ tr:nth-child(even) td {
   white-space: normal;
 }
 </style>
-<style scoped>
+<style scoped lang="scss">
 .dropdown-report {
   height: 100%;
   flex-direction: row;

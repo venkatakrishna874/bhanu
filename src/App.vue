@@ -77,7 +77,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped lang="scss">
 @import '~bootstrap/dist/css/bootstrap.css';
 html,
 body {

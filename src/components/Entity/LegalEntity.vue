@@ -202,18 +202,7 @@ export default {
 };
 </script>
 
-<style>
-.vue-app {
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 16px;
-  height: auto;
-}
-
-.v-input__slot {
-  margin-left: 40px;
-}
-
+<style lang="scss">
 .k-grid-header .k-header {
   font-weight: normal !important;
   font-size: 14px;
@@ -256,29 +245,6 @@ export default {
 .k-grid-header {
   padding-right: 0px !important;
 }
-
-.dropDownStatusTemplate {
-  color: #4a4a4a;
-  width: 100px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  outline: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
-.dropDownActionTemplate {
-  color: #4a4a4a;
-  width: 150px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 0;
-  outline: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-}
-
 .k-list .k-item.k-state-selected,
 .k-list .k-item:hover.k-state-selected {
   color: #f0f0f0;
@@ -293,19 +259,6 @@ export default {
 .k-pager-numbers .k-link,
 .k-pager-numbers .k-link:link {
   color: #4a4a4a;
-}
-
-.linkLegalEntity {
-  text-decoration: underline !important;
-  color: blue !important;
-  cursor: pointer;
-  text-align: center;
-}
-
-img.excel-image {
-  cursor: pointer;
-  height: 21px;
-  text-align: center !important;
 }
 
 #entityGrid .entityname {
@@ -355,5 +308,53 @@ img.excel-image {
 #entityGrid.k-grid table[role='grid'] th.k-header {
   overflow-wrap: break-word;
   white-space: normal;
+}
+</style>
+
+<style scoped lang="scss">
+.vue-app {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  height: auto;
+}
+
+.v-input__slot {
+  margin-left: 40px;
+}
+
+.dropDownStatusTemplate {
+  color: #4a4a4a;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.dropDownActionTemplate {
+  color: #4a4a4a;
+  width: 150px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.linkLegalEntity {
+  text-decoration: underline !important;
+  color: blue !important;
+  cursor: pointer;
+  text-align: center;
+}
+
+img.excel-image {
+  cursor: pointer;
+  height: 21px;
+  text-align: center !important;
 }
 </style>

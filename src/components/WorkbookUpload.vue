@@ -44,7 +44,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped lang="scss">
 .workbook-card {
   width: 1520px;
   margin-bottom: 20px;
