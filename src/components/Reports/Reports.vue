@@ -32,7 +32,7 @@
                 <button class="generate-btn" @click="generateReport()"> Generate Report </button>
             </div>
             <div style="padding-right:23px">
-                <button class="export-btn" @click="exportExcel()"><img class="excel-icon" src="assets/excel.png"  /><span>Export to Excel </span></button>
+                <button class="export-btn" @click="exportExcel()"><img class="excel-icon" src="../../assets/excel.png"  /><span>Export to Excel </span></button>
             </div>
         </div>
         <div class="report-grid">
