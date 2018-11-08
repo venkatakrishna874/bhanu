@@ -21,6 +21,7 @@
                 </kendo-datasource>
                 <kendo-grid ref="grid" id="entityGrid"
                     :data-source-ref="'localDataSource'"
+                    :row-template="getLegalEntityGridRowTemplate"
                     :filterable-extra="false"
                     :sortable="true"
                     :pageable-always-visible="true"
@@ -28,17 +29,17 @@
                     :pageable-page-sizes="[5, 10, 20, 100]"
                     v-on:detailinit="detailInit"
                     >
-                    <kendo-grid-column title="Entity ID" width="130px" :field="'legalEntityId'" :template="getLinkTemplate()"></kendo-grid-column>
+                    <kendo-grid-column title="Entity ID" width="130px" :field="'legalEntityId'" ></kendo-grid-column>
                     <kendo-grid-column title="Locator Number" width="130px" :field="'locatorNumber'"></kendo-grid-column>
                     <kendo-grid-column title="Entity Name" width="300px" :field="'legalEntityName'" :attributes='{"class":"legalEntityName"}'></kendo-grid-column>
                     <kendo-grid-column title="Region" width="120px" :field="'regionCode'"></kendo-grid-column>
-                    <kendo-grid-column title="Trial Balance" width="130px" :filterable="false" :template="getCheckCircleTemplate"></kendo-grid-column>
-                    <kendo-grid-column title="Automatic Adjustments " width="125px" :filterable="false" :template="getCheckCircleTemplate"></kendo-grid-column>
-                    <kendo-grid-column title="Manual Adjustments" width="125px" :template="getTaxWorkPaperTemplate"></kendo-grid-column>
-                    <kendo-grid-column title="Status" width="125px" :template="getStatusTemplate()"></kendo-grid-column>
-                    <kendo-grid-column title="Taxable Income Summary" width="130px" :template="getTaxableIncomeSummaryTemplate" ></kendo-grid-column>
-                    <kendo-grid-column title="Last Allocation" width="150px" :field="'lastAllocationDate'" :filterable="false" :template="getLastAllocationTemplate()"></kendo-grid-column>
-                    <kendo-grid-column title="Actions" width="250px" :filterable="false" :template="getDropDownTemplate()"></kendo-grid-column>
+                    <kendo-grid-column title="Trial Balance" width="130px" :filterable="false" ></kendo-grid-column>
+                    <kendo-grid-column title="Automatic Adjustments " width="125px" :filterable="false" ></kendo-grid-column>
+                    <kendo-grid-column title="Manual Adjustments" width="125px" ></kendo-grid-column>
+                    <kendo-grid-column title="Status" width="125px" ></kendo-grid-column>
+                    <kendo-grid-column title="Taxable Income Summary" width="130px"  ></kendo-grid-column>
+                    <kendo-grid-column title="Last Allocation" width="150px" :field="'lastAllocationDate'" :filterable="false" ></kendo-grid-column>
+                    <kendo-grid-column title="Actions" width="250px" :filterable="false" ></kendo-grid-column>
                 </kendo-grid>
             </div>
         </div>
@@ -48,6 +49,8 @@
 
 <script>
 import modal from './LegalEntityDetails.vue';
+import Vue from 'vue';
+import LegalEntityGridRow from './LegalEntityGridRow.vue';
 import $ from 'jquery';
 export default {
   data() {
@@ -119,6 +122,14 @@ export default {
     },
     getLastAllocationTemplate() {
       return "#= kendo.toString(kendo.parseDate(lastAllocationDate, 'yyyy-MM-dd'), 'MM/dd/yyyy hh:mm') #";
+    },
+    getLegalEntityGridRowTemplate(e) {
+      return {
+        template: Vue.component(LegalEntityGridRow.name, LegalEntityGridRow),
+        templateArgs: Object.assign({}, e, {
+          parentComponent: this.$refs.grid
+        })
+      };
     },
     detailInit: function(e) {
       $(
