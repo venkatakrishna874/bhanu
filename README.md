@@ -1,4 +1,4 @@
-# bhanu-ey
+# ey-tax-recalc-ui
 
 ## Project setup
 ```
