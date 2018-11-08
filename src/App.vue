@@ -2,7 +2,7 @@
     <div class="site">
         <header class="header">
             <div class="header-title-container">
-                <img src='../src/assets/ey-logo.svg' alt="EY" height="42" width="42">
+                <img src='./assets/ey-logo.svg' alt="EY" height="42" width="42">
                 TaxSpace - Real Estate | Tishman-Speyer 
             </div>
             <div v-if="showTemplate">
