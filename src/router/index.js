@@ -2,15 +2,16 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import LegalEntity from '../components/Entity/LegalEntity.vue';
 import Reports from '../components/Reports/Reports.vue';
+import ReportsHome from '../components/Reports/ReportsHome.vue';
 import PartnerAllocations from '../components/PartnerAllocations/PartnerAllocations.vue';
-import WorkbookUpload from '../components/WorkbookUpload.vue';
+import WorkbookUpload from '../components/Entity/WorkbookUpload.vue';
 import Configuration from '../components/Configurations/Configuration.vue';
 import LegalentityDetails from '../components/Entity/LegalEntityDetails.vue';
-import AdminPage from '../components/Admin/Admin.vue';
-import LoginPage from '../components/Login/Login.vue';
+import Admin from '../components/Admin/Admin.vue';
+import Login from '../components/Login/Login.vue';
 import Home from '../components/Home/Home.vue';
 import PartnerDetails from '../components/PartnerAllocations/PartnerDetails.vue';
-import EpCalculator from '../components/EpCalculator.vue';
+import EpCalculator from '../components/Reports/EpCalculator.vue';
 
 Vue.use(Router);
 
@@ -23,7 +24,7 @@ export default new Router({
     {
       path: '/Login',
       name: 'Login',
-      component: LoginPage
+      component: Login
     },
     {
       path: '/PartnerDetails',
@@ -36,19 +37,26 @@ export default new Router({
       component: Home
     },
     {
-      path: '/EpCalculator',
-      name: 'EpCalculator',
-      component: EpCalculator
-    },
-    {
       path: '/PartnerAllocations',
       name: 'Partner Allocations',
       component: PartnerAllocations
     },
     {
       path: '/Reports',
-      name: 'Reports',
-      component: Reports
+      name: 'ReportsHome',
+      component: ReportsHome,
+      children: [
+        {
+          path: '',
+          name: 'Reports',
+          component: Reports
+        },
+        {
+          path: 'EpCalculator',
+          name: 'EpCalculator',
+          component: EpCalculator
+        }
+      ]
     },
     {
       path: '/Configuration',
@@ -58,7 +66,7 @@ export default new Router({
     {
       path: '/Admin',
       name: 'Admin',
-      component: AdminPage
+      component: Admin
     },
     {
       path: '/LegalentityDetails',

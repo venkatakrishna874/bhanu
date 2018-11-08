@@ -3,7 +3,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-subnav">
             <li class="nav-item" >
-                 <router-link class="nav-link" to="/EpCalculator" exact>E&P Calculation </router-link>
+                 <router-link class="nav-link" to="/Reports/EpCalculator">E&P Calculation </router-link>
             </li>
         </ul>
     </div>

@@ -20,7 +20,7 @@
                                     <router-link class="ey-nav-link" to="/PartnerAllocations" exact>Partner Allocations</router-link>
                                 </li>
                                 <li class="ey-nav-item">
-                                    <router-link class="ey-nav-link" to="/Reports" exact>Reports</router-link>
+                                    <router-link class="ey-nav-link" to="/Reports">Reports</router-link>
                                 </li>
                                 <li class="ey-nav-item">
                                     <router-link class="ey-nav-link" to="/Configuration" exact>Configuration</router-link>
@@ -38,7 +38,7 @@
                         </span>
                     </div>
                 </div>
-                <SubNav v-if="showSubNav"></SubNav>
+                <sub-nav v-if="showSubNav"></sub-nav>
             </div>
         </header>
         <main class="site-content">
@@ -68,7 +68,8 @@ export default {
   computed: {
     disabledClass: () => (this.isAddButtonDisabled ? 'disabled' : ''),
     showSubNav: function() {
-      if (this.$route.name === 'Reports') {
+      console.log(this.$route);
+      if (this.$route.path.includes('/Reports')) {
         return true;
       } else {
         return false;
