@@ -35,11 +35,17 @@
         <option value="TR">Tier</option>
       </select>
     </td>
-    <modal v-show="isModalVisible" @close="closeModal"/>
+    <legal-entity-details v-show="isModalVisible" @close="closeModal"/>
   </tr>
 </template>
 <script>
+import LegalEntityDetails from './LegalEntityDetails.vue';
+
 export default {
+  name: 'legal-entity-grid-row',
+  components: {
+    LegalEntityDetails
+  },
   data() {
     return {
       selected: 'Action',

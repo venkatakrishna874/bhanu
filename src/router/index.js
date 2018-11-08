@@ -48,14 +48,7 @@ export default new Router({
     {
       path: '/Reports',
       name: 'Reports',
-      component: Reports,
-      children: [
-        {
-          path: '/EpCalculator',
-          name: 'EpCalculator',
-          component: EpCalculator
-        }
-      ]
+      component: Reports
     },
     {
       path: '/Configuration',
