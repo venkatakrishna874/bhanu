@@ -39,7 +39,7 @@ import axios from 'axios';
 export default {
   methods: {
     hideTemplate() {
-      this.$parent.showTemplate = true;
+      this.$parent.showTemplate = false;
     },
     login: function() {
       axios({
