@@ -56,7 +56,7 @@ export default {
     loginSuccessful(req) {
       localStorage.token = req;
       this.$parent.showTemplate = true;
-      this.$router.push('/HomePage');
+      this.$router.push('/Home');
     }
   },
   beforeMount() {
