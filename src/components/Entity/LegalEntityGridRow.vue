@@ -98,11 +98,8 @@ export default {
       this.isModalVisible = false;
     },
     onChange(event) {
-      console.log(event.target.value);
-      console.log(this.templateArgs);
-      console.log(this.templateArgs.parentComponent.$route);
       if (event.target.value === 'UploadTaxWorkpaper') {
-        this.templateArgs.parentComponent.$route.push('WorkbookUpload');
+        this.templateArgs.parentComponent.$router.push('/WorkbookUpload');
       }
       // const link = this.selected;
       // if (link === 'TB') {

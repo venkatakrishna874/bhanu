@@ -123,11 +123,10 @@ export default {
     getLastAllocationTemplate() {
       return "#= kendo.toString(kendo.parseDate(lastAllocationDate, 'yyyy-MM-dd'), 'MM/dd/yyyy hh:mm') #";
     },
-    getLegalEntityGridRowTemplate(e) {
-      console.log(e);
+    getLegalEntityGridRowTemplate(value) {
       return {
         template: Vue.component(LegalEntityGridRow.name, LegalEntityGridRow),
-        templateArgs: Object.assign({}, e, {
+        templateArgs: Object.assign({}, value, {
           parentComponent: this.$refs.grid,
           route: this.$route
         })

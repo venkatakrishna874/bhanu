@@ -20,9 +20,12 @@
   </div>
 </template>
 <script>
-// import vueDropzone from 'vue2-dropzone';
+import VueDropzone from 'vue2-dropzone';
 
 export default {
+  components: {
+    VueDropzone
+  },
   data: () => ({
     dropOptions: {
       url: 'http://localhost:63219/RECalc/API/TrialBalanceStage/UploadFile',
@@ -33,12 +36,12 @@ export default {
     },
     uploadLinksStatus: false
   }),
-  components: {},
   methods: {
     onClickOutside() {
       this.uploadLinksStatus = false;
     },
     gotoLegalEntity() {
+      console.log(this.$router);
       this.$router.push({ path: '/legalEntity' });
     }
   }

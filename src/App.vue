@@ -68,7 +68,6 @@ export default {
   computed: {
     disabledClass: () => (this.isAddButtonDisabled ? 'disabled' : ''),
     showSubNav: function() {
-      console.log(this.$route);
       if (this.$route.path.includes('/Reports')) {
         return true;
       } else {
