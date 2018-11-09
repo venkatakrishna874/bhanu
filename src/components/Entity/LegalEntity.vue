@@ -127,8 +127,7 @@ export default {
       return {
         template: Vue.component(LegalEntityGridRow.name, LegalEntityGridRow),
         templateArgs: Object.assign({}, value, {
-          parentComponent: this.$refs.grid,
-          route: this.$route
+          parentComponent: this.$refs.grid
         })
       };
     },

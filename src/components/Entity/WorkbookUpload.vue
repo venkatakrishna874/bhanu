@@ -41,7 +41,6 @@ export default {
       this.uploadLinksStatus = false;
     },
     gotoLegalEntity() {
-      console.log(this.$router);
       this.$router.push({ path: '/legalEntity' });
     }
   }
