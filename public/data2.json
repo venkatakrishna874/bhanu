@@ -1,0 +1,65 @@
+{
+    "localDataSource2": [
+        {
+          "entityId": 670200,
+          "eyAccountDescription": "Depreciation Exp - Building",
+          "book": "128,496",
+          "autoAdjustment": "0",
+          "manualAdjustment": "128,496",
+          "cumulativetax": "0",
+          "Currenttax": "-",
+          "taxReclass": "1000",
+          "taxIncome": "129,496",
+          "taxUSD": "29,496"
+        },
+        {
+            "entityId": 670200,
+            "eyAccountDescription": "Depreciation Exp - Building",
+            "book": "128,496",
+            "autoAdjustment": "0",
+            "manualAdjustment": "128,496",
+            "cumulativetax": "0",
+            "Currenttax": "-",
+            "taxReclass": "1000",
+            "taxIncome": "129,496",
+            "taxUSD": "29,496"
+          },
+          {
+            "entityId": 670200,
+            "eyAccountDescription": "Depreciation Exp - Building",
+            "book": "128,496",
+            "autoAdjustment": "0",
+            "manualAdjustment": "128,496",
+            "cumulativetax": "0",
+            "Currenttax": "-",
+            "taxReclass": "1000",
+            "taxIncome": "129,496",
+            "taxUSD": "29,496"
+          },
+          {
+            "entityId": 670200,
+            "eyAccountDescription": "Depreciation Exp - Building",
+            "book": "128,496",
+            "autoAdjustment": "0",
+            "manualAdjustment": "128,496",
+            "cumulativetax": "0",
+            "Currenttax": "-",
+            "taxReclass": "1000",
+            "taxIncome": "129,496",
+            "taxUSD": "29,496"
+          },
+          {
+            "entityId": 670200,
+            "eyAccountDescription": "Depreciation Exp - Building",
+            "book": "128,496",
+            "autoAdjustment": "0",
+            "manualAdjustment": "128,496",
+            "cumulativetax": "0",
+            "Currenttax": "-",
+            "taxReclass": "1000",
+            "taxIncome": "129,496",
+            "taxUSD": "29,496"
+          }
+      ]
+}
+    

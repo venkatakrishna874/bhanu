@@ -39,7 +39,7 @@ import axios from 'axios';
 export default {
   methods: {
     hideTemplate() {
-      this.$parent.showTemplate = false;
+      this.$parent.showTemplate = true;
     },
     login: function() {
       axios({
@@ -49,7 +49,14 @@ export default {
           'Content-type': 'application/json'
         }
       }).then(response => {
-        this.loginSuccessful(response.data.access_token);
+        console.log(response);
+        response.data['group'] = 'admin';
+        if (response.data.group === 'admin') {
+          // do if the user is a admin
+          this.loginSuccessful(response.data.access_token);
+        } else {
+          //do if the user not a admin
+        }
       });
     },
 

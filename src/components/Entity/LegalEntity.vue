@@ -60,7 +60,7 @@ export default {
       dropDownTemplate: '',
       customtransport: {
         read: {
-          url: 'http://localhost:63219/Recalc/API/LegalEntityView/GetAsync'
+          url: 'http://localhost:8080/legalEntityData.json'
         }
       }
     };
@@ -124,10 +124,12 @@ export default {
       return "#= kendo.toString(kendo.parseDate(lastAllocationDate, 'yyyy-MM-dd'), 'MM/dd/yyyy hh:mm') #";
     },
     getLegalEntityGridRowTemplate(e) {
+      console.log(e);
       return {
         template: Vue.component(LegalEntityGridRow.name, LegalEntityGridRow),
         templateArgs: Object.assign({}, e, {
-          parentComponent: this.$refs.grid
+          parentComponent: this.$refs.grid,
+          route: this.$route
         })
       };
     },
@@ -140,8 +142,7 @@ export default {
         .kendoGrid({
           dataSource: {
             transport: {
-              read:
-                'http://localhost:63219/Recalc/API/PartnerLegalEntityView/GetAsync'
+              read: 'http://localhost:8080/legalEntityData.json'
             },
             filter: {
               field: 'parentLEID',
