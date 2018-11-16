@@ -20,7 +20,7 @@
                                     <router-link class="ey-nav-link" to="/PartnerAllocations" exact>Partner Allocations</router-link>
                                 </li>
                                 <li class="ey-nav-item">
-                                    <router-link class="ey-nav-link" to="/Reports">Reports</router-link>
+                                    <router-link class="ey-nav-link" to="/ReportsHome">Reports</router-link>
                                 </li>
                                 <li class="ey-nav-item">
                                     <router-link class="ey-nav-link" to="/Configuration" exact>Configuration</router-link>
@@ -38,7 +38,7 @@
                         </span>
                     </div>
                 </div>
-                <sub-nav v-if="showSubNav"></sub-nav>
+                <sub-nav v-if="hasSubNav" :config="activeNavItem.subNav" ></sub-nav>
             </div>
         </header>
         <main class="site-content">
@@ -54,6 +54,8 @@
 </template>
 <script>
 import SubNav from './components/Shared/SubNav.vue';
+import { EyNavBarConfig } from './components/Shared/EYNavBarConfig';
+
 export default {
   name: 'App',
   components: {
@@ -62,17 +64,53 @@ export default {
   data() {
     return {
       isAddButtonDisabled: true,
-      showTemplate: true
+      showTemplate: true,
+      activeNavItem: [],
+      navBarConfig: []
     };
+  },
+  created() {
+    this.navBarConfig = this.getNavBarConfig();
+    this.updateActiveNavItem();
   },
   computed: {
     disabledClass: () => (this.isAddButtonDisabled ? 'disabled' : ''),
-    showSubNav: function() {
-      if (this.$route.path.includes('/Reports')) {
+    hasSubNav: function() {
+      if (this.activeNavItem.subNav && this.activeNavItem) {
         return true;
       } else {
         return false;
       }
+    }
+  },
+  watch: {
+    $route: 'updateActiveNavItem'
+  },
+  methods: {
+    updateActiveNavItem() {
+      this.activeNavItem = this.navBarConfig.find(item => {
+        if (item.subNav && item.subNav.length) {
+          return item.subNav.find(subItem => {
+            return subItem.route === this.$route.fullPath;
+          });
+        } else {
+          return item.route === this.$route.fullPath;
+        }
+      });
+    },
+    getNavBarConfig() {
+      this.navBarConfig = [
+        new EyNavBarConfig('/Home', 'Home'),
+        new EyNavBarConfig('/LegalEntity', 'Entity'),
+        new EyNavBarConfig('/PartnerAllocations', 'Partner Allocations'),
+        new EyNavBarConfig('/ReportsHome', 'Reports', [
+          new EyNavBarConfig('/ReportsHome/Reports', ''),
+          new EyNavBarConfig('/ReportsHome/EpCalculator', 'E&P Calculator')
+        ]),
+        new EyNavBarConfig('/Configuration', 'Configuration'),
+        new EyNavBarConfig('/Admin', 'Admin')
+      ];
+      return this.navBarConfig;
     }
   }
 };

@@ -42,12 +42,16 @@ export default new Router({
       component: PartnerAllocations
     },
     {
-      path: '/Reports',
+      path: '/ReportsHome',
       name: 'ReportsHome',
       component: ReportsHome,
       children: [
         {
           path: '',
+          redirect: 'Reports'
+        },
+        {
+          path: 'Reports',
           name: 'Reports',
           component: Reports
         },

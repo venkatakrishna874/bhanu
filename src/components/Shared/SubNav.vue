@@ -2,15 +2,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark subnavbar">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-subnav">
-            <li class="nav-item" >
-                 <router-link class="nav-link" to="/Reports/EpCalculator">E&P Calculation </router-link>
+            <li class="ey-sub-nav-item" v-for="(subNavItem, index) in config" :key="index">
+                 <router-link class="ey-sub-nav-link" :to="subNavItem.route" >{{subNavItem.label}}</router-link>
             </li>
         </ul>
     </div>
 </nav>
 </template>
 <script>
-export default {};
+export default {
+  props: ['config']
+};
 </script>
 <style>
 .subnavbar .collapse.navbar-collapse {
